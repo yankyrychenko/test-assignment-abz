@@ -1,0 +1,23 @@
+@import 'src/styles/typography';
+@import 'src/styles/colors';
+
+.button {
+  min-width: 100px;
+  height: 34px;
+  cursor: pointer;
+  font: $font16;
+  border: 0;
+  border-radius: 80px;
+  background-color: $yellow;
+
+  &:hover {
+    background-color: $yellow-bright;
+    transition: background-color 250ms;
+  }
+
+  &:disabled {
+    color: $white;
+    background-color: $soft-grey;
+    transition: color, background-color 250ms;
+  }
+}

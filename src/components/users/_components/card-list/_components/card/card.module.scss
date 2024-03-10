@@ -1,0 +1,35 @@
+@import 'src/styles/breakpoints';
+@import 'src/styles/colors';
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: $white;
+
+  @include breakpoint-up('md') {
+    width: calc((100% - 16px) / 2);
+  }
+
+  @include breakpoint-up('lg') {
+    width: calc((100% - (29px * 2)) / 3);
+  }
+}
+
+.photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.name {
+  margin-top: 20px;
+}
+
+.position {
+  margin-top: 20px;
+}

@@ -1,0 +1,1 @@
+export { OnePage } from './OnePage';

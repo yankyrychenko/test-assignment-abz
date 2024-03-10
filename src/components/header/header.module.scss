@@ -1,0 +1,35 @@
+@import 'src/styles/breakpoints';
+@import 'src/styles/colors';
+
+.header {
+  padding: 13px 0;
+  background-color: $white;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include breakpoint-up('md') {
+    padding: 0 32px;
+  }
+
+  @include breakpoint-up('lg') {
+    padding: 0 60px;
+    max-width: 1290px;
+  }
+}
+
+.nav_list {
+  display: flex;
+}
+
+.nav_item {
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+}
+

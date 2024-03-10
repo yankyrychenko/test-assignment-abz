@@ -1,0 +1,33 @@
+@import 'src/styles/breakpoints';
+@import 'src/styles/typography';
+@import 'src/styles/colors';
+
+.section {
+  padding: 140px 0;
+  background-color: $light-grey;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include breakpoint-up('md') {
+    padding: 0 32px;
+  }
+
+  @include breakpoint-up('lg') {
+    padding: 0 60px;
+    max-width: 1290px;
+  }
+}
+
+.title {
+  font: $h1;
+  text-align: center;
+}
+
+.button {
+  display: block;
+  margin: 50px auto 0;
+  width: 120px;
+}

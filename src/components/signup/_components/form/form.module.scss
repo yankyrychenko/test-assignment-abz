@@ -1,0 +1,30 @@
+.form {
+  margin: 50px auto 0;
+  max-width: 370px;
+}
+
+.input_wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.positions_title {
+  margin-top: 25px;
+}
+
+.input_photo {
+  margin-top: 47px;
+}
+
+.submit_button {
+  display: block;
+  margin: 50px auto 0;
+}
+
+.positions_list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 11px;
+}

@@ -1,0 +1,55 @@
+@import 'src/styles/typography';
+@import 'src/styles/colors';
+
+.label {
+  display: flex;
+}
+
+.input {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.upload_button {
+  display: block;
+  padding: 14px 15px;
+  border: 1px solid $black;
+  border-radius: 4px 0 0 4px;
+  background-color: transparent;
+
+  &.has_error {
+    border: 2px solid $red;
+  }
+}
+
+.file_name {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid $grey;
+  border-left: 0;
+  border-radius: 0 4px 4px 0;
+  background-color: transparent;
+
+  &.with_file {
+    color: $black;
+  }
+
+  &.without_file {
+    color: $grey;
+  }
+
+  &.has_error {
+    border: 2px solid $red;
+    border-left: 0;
+  }
+}
+
+.error {
+  display: block;
+  margin-top: 4px;
+  padding-left: 16px;
+  font: $font14;
+  color: $red;
+}

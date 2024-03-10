@@ -1,0 +1,62 @@
+@import 'src/styles/typography';
+@import 'src/styles/colors';
+
+.input_wrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  font: $font16;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+
+  &.has_error {
+    border: 2px solid $red;
+  }
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+.label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+  pointer-events: none;
+  color: $dark-grey;
+  transition: transform 250ms;
+
+  &.has_error {
+    color: $red;
+  }
+}
+
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  padding: 0 4px;
+  transform: translateY(-200%) scale(0.75);
+  background-color: $light-grey;
+}
+
+.helper_text {
+  display: block;
+  margin-top: 4px;
+  padding-left: 16px;
+  font: $font14;
+  color: $dark-grey;
+}
+
+.error {
+  display: block;
+  margin-top: 4px;
+  padding-left: 16px;
+  font: $font14;
+  color: $red;
+}

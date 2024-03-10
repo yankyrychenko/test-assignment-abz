@@ -1,0 +1,62 @@
+@import 'src/styles/typography';
+@import 'src/styles/colors';
+
+.wrapper {
+  font: $font16;
+}
+
+.input {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.label {
+  position: relative;
+  padding-left: 28px;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 20px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $grey;
+    border-radius: 100%;
+    background: transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: $blue;
+    transition: all 0.2s ease;
+  }
+}
+
+.input:not(:checked) + .label:before {
+  border: 1px solid $grey;
+}
+
+.input:checked + .label:before {
+  border: 1px solid $blue;
+}
+
+.input:not(:checked) + .label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.input:checked + .label:after {
+  opacity: 1;
+  transform: scale(1);
+}

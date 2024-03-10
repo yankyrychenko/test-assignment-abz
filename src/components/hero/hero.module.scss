@@ -1,0 +1,48 @@
+@import 'src/styles/breakpoints';
+@import 'src/styles/colors';
+
+.section {
+  background-color: $light-grey;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 40px 16px 71px 16px;
+  background-image: linear-gradient(
+                  0deg,
+                  rgba(0, 0, 0, 0.5) 0%,
+                  rgba(0, 0, 0, 0.5) 100%
+  ),
+  url(src/assets/hero-background.jpeg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint-up('md') {
+    padding: 89px 32px 88px;
+  }
+
+  @include breakpoint-up('lg') {
+    padding: 164px 60px 163px 60px;
+    max-width: 1170px;
+  }
+}
+
+.content_wrapper {
+  margin: auto;
+  max-width: 380px;
+  text-align: center;
+}
+
+.title {
+  color: $white;
+}
+
+.subtitle {
+  margin-top: 21px;
+  color: $white;
+}
+
+.button {
+  margin-top: 32px;
+}

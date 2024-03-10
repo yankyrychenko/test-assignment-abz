@@ -1,0 +1,22 @@
+@import 'normalize.css';
+@import './typography';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  font: $h1;
+}
+
+p,
+span {
+  font: $font16;
+}
+
+ul {
+  list-style: none;
+}
